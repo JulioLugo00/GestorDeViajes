@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             cambiarPantalla()
 
 
-        },5000)
+        },1000)
     }
 
     private fun cambiarPantalla() {

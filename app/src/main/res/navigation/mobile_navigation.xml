@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="mx.itesm.noobmasters.gestordeviajes.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_map"
+        android:name="mx.itesm.noobmasters.gestordeviajes.ui.map.MapFragment"
+        android:label="@string/title_mapa"
+        tools:layout="@layout/fragment_mapa" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="mx.itesm.noobmasters.gestordeviajes.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:id="@+id/navigation_actividades"
+        android:name="mx.itesm.noobmasters.gestordeviajes.ui.actividades.ActividadesFragment"
+        android:label="@string/title_actividades"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

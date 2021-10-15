@@ -28,7 +28,7 @@
                 android:layout_height="0dp"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:paddingTop="40dp"
+                android:paddingTop="20dp"
                 android:text="Buenas tardes, usuario promedio"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
@@ -36,7 +36,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="100dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
 
@@ -48,7 +48,7 @@
                     android:layout_weight="1"
                     android:scaleType="fitXY"
 
-                    app:srcCompat="@drawable/fondo_ejemplo"
+                    app:srcCompat="@drawable/fondo_ejemplo02"
                     tools:src="@tools:sample/backgrounds/scenic" />
 
                 <ImageView
@@ -58,7 +58,7 @@
                     android:layout_margin="20dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/fondo_ejemplo"
+                    app:srcCompat="@drawable/fondo_ejemplo02"
                     tools:src="@tools:sample/backgrounds/scenic" />
 
                 <ImageView
@@ -68,167 +68,239 @@
                     android:layout_margin="20dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/fondo_ejemplo"
+                    app:srcCompat="@drawable/fondo_ejemplo02"
                     tools:src="@tools:sample/backgrounds/scenic" />
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="1.3">
 
-            <TextView
-                android:id="@+id/tvTituloFechasProximas"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:text="Recordatorio de fechas próximas"
-                android:textAlignment="viewStart"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="40dp"
-                android:clickable="true">
-
-                <ImageView
+                <TextView
+                    android:id="@+id/tvTituloFechasProximas"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/fondo_actividad_ejemplo"
-                    tools:src="@tools:sample/backgrounds/scenic" />
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center|left"
-                    android:layout_marginLeft="10dp"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@android:drawable/checkbox_on_background"
-                    tools:src="@tools:sample/avatars" />
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center|right"
-                    android:layout_marginRight="50dp"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar"
-                    tools:src="@tools:sample/avatars" />
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center|right"
-                    android:layout_marginRight="10dp"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@android:drawable/ic_menu_help"
-                    tools:src="@tools:sample/avatars" />
-
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Actividad 2"
-                    android:textAlignment="textStart"
-                    android:textColor="#FFFFFF"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="60dp"
-                    android:text="28 de agosto al 1 septiembre"
-                    android:textAlignment="textStart"
-                    android:textColor="#FFFFFF"
+                    android:layout_marginLeft="25dp"
+                    android:text="Recordatorio de fechas próximas"
+                    android:textAlignment="viewStart"
                     android:textSize="15dp"
                     android:textStyle="bold" />
 
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="40dp"
-                android:clickable="true">
-
-                <ImageView
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/fondo_actividad_ejemplo"
-                    tools:src="@tools:sample/backgrounds/scenic" />
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="40dp"
+                    android:clickable="true">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center|left"
-                    android:layout_marginLeft="10dp"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@android:drawable/checkbox_on_background"
-                    tools:src="@tools:sample/avatars" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/fondo_ejemplo03"
+                        tools:src="@drawable/fondo_ejemplo03" />
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center|right"
-                    android:layout_marginRight="50dp"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar"
-                    tools:src="@tools:sample/avatars" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@android:drawable/checkbox_on_background"
+                        tools:src="@tools:sample/avatars" />
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center|right"
-                    android:layout_marginRight="10dp"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@android:drawable/ic_menu_help"
-                    tools:src="@tools:sample/avatars" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="50dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+                        tools:src="@tools:sample/avatars" />
 
-                <TextView
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@android:drawable/ic_menu_help"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Actividad 1"
+                        android:textAlignment="textStart"
+                        android:textColor="#040927"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="60dp"
+                        android:text="28 de agosto al 1 septiembre"
+                        android:textAlignment="textStart"
+                        android:textColor="#040927"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="40dp"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/fondo_ejemplo03"
+                        tools:src="@drawable/fondo_ejemplo03" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@android:drawable/checkbox_on_background"
+                        tools:src="@tools:sample/avatars" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="50dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+                        tools:src="@tools:sample/avatars" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@android:drawable/ic_menu_help"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Actividad 2"
+                        android:textAlignment="textStart"
+                        android:textColor="#040927"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="60dp"
+                        android:text="28 de agosto al 1 septiembre"
+                        android:textAlignment="textStart"
+                        android:textColor="#040927"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="40dp"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/fondo_ejemplo03"
+                        tools:src="@drawable/fondo_ejemplo03" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@android:drawable/checkbox_on_background"
+                        tools:src="@tools:sample/avatars" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="50dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+                        tools:src="@tools:sample/avatars" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@android:drawable/ic_menu_help"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Mineral del chico"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="60dp"
+                        android:text="28 de agosto al 1 septiembre"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/btnAgregarActividad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Mineral del chico"
-                    android:textAlignment="textStart"
-                    android:textColor="#FFFFFF"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="60dp"
-                    android:text="28 de agosto al 1 septiembre"
-                    android:textAlignment="textStart"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-            </FrameLayout>
-
-            <Button
-                android:id="@+id/btnAgregarActividad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:drawableTop="@android:drawable/ic_menu_add"
-                android:text="Agregar evento" />
-
-        </LinearLayout>
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:drawableTop="@android:drawable/ic_menu_add"
+                    android:text="Agregar evento" />
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

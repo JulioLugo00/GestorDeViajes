@@ -14,6 +14,8 @@ import mx.itesm.noobmasters.gestordeviajes.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
+
+
     private var _binding: FragmentHomeBinding? = null
 
     // This property is only valid between onCreateView and
@@ -36,7 +38,7 @@ class HomeFragment : Fragment() {
             textView.text = it
         })
         */
-
+        //binding.pbCargandoHome.visibility=View.INVISIBLE
         return root
     }
 

@@ -1,4 +1,4 @@
-package mx.itesm.noobmasters.gestordeviajes.ui.dashboard
+package mx.itesm.noobmasters.gestordeviajes.ui.actividades
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import mx.itesm.noobmasters.gestordeviajes.R
-import mx.itesm.noobmasters.gestordeviajes.databinding.FragmentDashboardBinding
+import mx.itesm.noobmasters.gestordeviajes.databinding.FragmentNotificationsBinding
 
-class DashboardFragment : Fragment() {
+class ActividadesFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
-    private var _binding: FragmentDashboardBinding? = null
+    private lateinit var actividadesViewModel: ActividadesViewModel
+    private var _binding: FragmentNotificationsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,20 +24,16 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+        actividadesViewModel =
+            ViewModelProvider(this).get(ActividadesViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-
-
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textNotifications
+        actividadesViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
-
-
         return root
     }
 
