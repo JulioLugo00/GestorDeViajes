@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "560162881944",
+    "firebase_url": "https://gestordeviajes-a5f4e-default-rtdb.firebaseio.com",
+    "project_id": "gestordeviajes-a5f4e",
+    "storage_bucket": "gestordeviajes-a5f4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560162881944:android:4cd20e07f422a514696bed",
+        "android_client_info": {
+          "package_name": "mx.itesm.noobmasters.gestordeviajes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560162881944-93cjp42knmuva9jvj0m4icmspiq4a5vb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9HY14ipiEu5-gcagPdpFZkmbIJZ6MgcY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560162881944-93cjp42knmuva9jvj0m4icmspiq4a5vb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
