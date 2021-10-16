@@ -1,71 +1,34 @@
 {
   "project_info": {
-    "project_number": "1039274683861",
-    "firebase_url": "https://rt-julio-default-rtdb.firebaseio.com",
-    "project_id": "rt-julio",
-    "storage_bucket": "rt-julio.appspot.com"
+    "project_number": "560162881944",
+    "firebase_url": "https://gestordeviajes-a5f4e-default-rtdb.firebaseio.com",
+    "project_id": "gestordeviajes-a5f4e",
+    "storage_bucket": "gestordeviajes-a5f4e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1039274683861:android:e35771cfadab52f0bd215c",
+        "mobilesdk_app_id": "1:560162881944:android:4cd20e07f422a514696bed",
         "android_client_info": {
           "package_name": "mx.itesm.noobmasters.gestordeviajes"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1039274683861-6vqt94g36jjh5lkkeqis2ihlcp0g20rk.apps.googleusercontent.com",
+          "client_id": "560162881944-93cjp42knmuva9jvj0m4icmspiq4a5vb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBcsG8gZVtMepWg-NX7bj4dTP6FI88Wwaw"
+          "current_key": "AIzaSyC9HY14ipiEu5-gcagPdpFZkmbIJZ6MgcY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1039274683861-6vqt94g36jjh5lkkeqis2ihlcp0g20rk.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1039274683861:android:05eba7e76b2523ddbd215c",
-        "android_client_info": {
-          "package_name": "mx.itesm.rt_julio"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1039274683861-v9me57ohdn8e2ptbg03vds6eam6una3o.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "mx.itesm.rt_julio",
-            "certificate_hash": "693fec381fc6657cc6a29a4b5c0d430de513dd21"
-          }
-        },
-        {
-          "client_id": "1039274683861-6vqt94g36jjh5lkkeqis2ihlcp0g20rk.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBcsG8gZVtMepWg-NX7bj4dTP6FI88Wwaw"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1039274683861-6vqt94g36jjh5lkkeqis2ihlcp0g20rk.apps.googleusercontent.com",
+              "client_id": "560162881944-93cjp42knmuva9jvj0m4icmspiq4a5vb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
