@@ -290,16 +290,16 @@
                         android:textStyle="bold" />
                 </FrameLayout>
 
-                <Button
-                    android:id="@+id/btnAgregarActividad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:drawableTop="@android:drawable/ic_menu_add"
-                    android:text="Agregar evento" />
             </LinearLayout>
         </ScrollView>
+
+        <Button
+            android:id="@+id/btnAgregarActividad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@android:drawable/ic_menu_add"
+            android:text="Agregar evento" />
 
     </LinearLayout>
 
