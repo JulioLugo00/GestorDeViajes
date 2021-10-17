@@ -41,7 +41,7 @@ class MainActivity2 : AppCompatActivity() {
 
         //Esconde el titulo de la app
         supportActionBar?.hide()
-    inicializarBase()
+    //inicializarBase()
     }
 
     private fun inicializarBase() {
