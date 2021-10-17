@@ -4,5 +4,5 @@
     <string name="title_home">Inicio</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_mapa">mapa</string>
-    <string name="title_actividades">Ver actividades</string>
+    <string name="title_eventos">Ver eventos</string>
 </resources>

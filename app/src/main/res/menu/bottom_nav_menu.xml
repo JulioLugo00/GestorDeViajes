@@ -11,8 +11,8 @@
         android:title="@string/title_mapa" />
 
     <item
-        android:id="@+id/navigation_actividades"
+        android:id="@+id/navigation_eventos"
         android:icon="@drawable/ic_ver_actividades"
-        android:title="@string/title_actividades" />
+        android:title="@string/title_eventos" />
 
 </menu>

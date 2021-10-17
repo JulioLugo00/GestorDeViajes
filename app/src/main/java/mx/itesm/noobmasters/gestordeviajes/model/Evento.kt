@@ -1,4 +1,13 @@
 package mx.itesm.noobmasters.gestordeviajes.model
 
-class Evento(val nombre:String, val tipo:Salida, val presupuesto:Int, val ubicacion:String ) {
+
+
+
+class Evento(val nombre:String?=""
+             , val tipo:Salida?=Salida.VIAJES,
+             val presupuesto:Int?=0,
+             val ubicacion:String?="",
+             val imagen:String?="",
+             val fecha:String?=""
+) {
 }
