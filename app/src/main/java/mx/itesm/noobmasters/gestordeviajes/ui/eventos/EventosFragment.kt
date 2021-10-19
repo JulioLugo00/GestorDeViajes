@@ -1,4 +1,4 @@
-package mx.itesm.noobmasters.gestordeviajes.ui.actividades
+package mx.itesm.noobmasters.gestordeviajes.ui.eventos
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,9 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import mx.itesm.noobmasters.gestordeviajes.databinding.FragmentNotificationsBinding
 
-class ActividadesFragment : Fragment() {
+class EventosFragment : Fragment() {
 
-    private lateinit var actividadesViewModel: ActividadesViewModel
+    private lateinit var eventosViewModel: EventosViewModel
     private var _binding: FragmentNotificationsBinding? = null
 
     // This property is only valid between onCreateView and
@@ -24,14 +24,14 @@ class ActividadesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        actividadesViewModel =
-            ViewModelProvider(this).get(ActividadesViewModel::class.java)
+        eventosViewModel =
+            ViewModelProvider(this).get(EventosViewModel::class.java)
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textNotifications
-        actividadesViewModel.text.observe(viewLifecycleOwner, Observer {
+        eventosViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
 
