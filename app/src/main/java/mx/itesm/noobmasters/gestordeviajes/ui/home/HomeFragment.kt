@@ -1,16 +1,16 @@
 package mx.itesm.noobmasters.gestordeviajes.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import mx.itesm.noobmasters.gestordeviajes.R
+import mx.itesm.noobmasters.gestordeviajes.CrearEventoActivity
 import mx.itesm.noobmasters.gestordeviajes.databinding.FragmentHomeBinding
+//import mx.itesm.noobmasters.gestordeviajes.ui.crearEvento.CrearEventoFragment
 
 class HomeFragment : Fragment() {
 
@@ -46,6 +46,11 @@ class HomeFragment : Fragment() {
 
     private fun registrarEventos() {
         homeViewModel.descargarDatosEventos()
+
+        binding.btnAgregarActividad.setOnClickListener{
+            val intCrearEvento = Intent(context, CrearEventoActivity::class.java)
+            startActivity(intCrearEvento)
+        }
     }
 
     private fun registrarObservadores() {

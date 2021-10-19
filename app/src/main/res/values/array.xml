@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opciones">
+        <item>Viaje</item>
+        <item>Salida</item>
+        <item>Cita</item>
+
+    </string-array>
+
+
+
+</resources>

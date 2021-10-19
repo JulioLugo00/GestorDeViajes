@@ -1,6 +1,5 @@
 package mx.itesm.noobmasters.gestordeviajes.ui.home
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.database.DataSnapshot
@@ -8,7 +7,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import mx.itesm.noobmasters.gestordeviajes.model.Evento
-import mx.itesm.noobmasters.gestordeviajes.model.Salida
 
 class HomeViewModel : ViewModel() {
 

@@ -1,6 +1,6 @@
 package mx.itesm.noobmasters.gestordeviajes.model
 
-enum class Salida {
+enum class EventoTipo {
     VIAJES,
     SALIDAS,
     CITAS

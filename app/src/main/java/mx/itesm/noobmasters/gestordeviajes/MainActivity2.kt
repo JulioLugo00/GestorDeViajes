@@ -10,8 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.firebase.database.FirebaseDatabase
 import mx.itesm.noobmasters.gestordeviajes.databinding.ActivityMain2Binding
 import mx.itesm.noobmasters.gestordeviajes.model.Evento
-import mx.itesm.noobmasters.gestordeviajes.model.Salida
-import java.util.*
+import mx.itesm.noobmasters.gestordeviajes.model.EventoTipo
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -47,12 +46,12 @@ class MainActivity2 : AppCompatActivity() {
     private fun inicializarBase() {
         baseDatos = FirebaseDatabase.getInstance()
 
-        val evento1=Evento("camping",Salida.SALIDAS,2000,"Estado de Mexico","https://www.dzoom.org.es/wp-content/uploads/2019/09/paisajes-expresivos-734x489.jpg","29 de octubre del 2021")
+        val evento1=Evento("camping",EventoTipo.SALIDAS,2000,"Estado de Mexico","https://www.dzoom.org.es/wp-content/uploads/2019/09/paisajes-expresivos-734x489.jpg","29 de octubre del 2021")
 
-        val evento2=Evento("Viaje a Cancun",Salida.VIAJES,50000,"Tulum, Cancun","https://www.dzoom.org.es/wp-content/uploads/2019/09/paisajes-expresivos-734x489.jpg","07 de noviembre de 2021")
-        val evento3=Evento("Cita",Salida.CITAS,5000,"Polanco, CDMX","https://www.dzoom.org.es/wp-content/uploads/2019/09/paisajes-expresivos-734x489.jpg")
+        val evento2=Evento("Viaje a Cancun",EventoTipo.VIAJES,50000,"Tulum, Cancun","https://www.dzoom.org.es/wp-content/uploads/2019/09/paisajes-expresivos-734x489.jpg","07 de noviembre de 2021")
+        val evento3=Evento("Cita",EventoTipo.CITAS,5000,"Polanco, CDMX","https://www.dzoom.org.es/wp-content/uploads/2019/09/paisajes-expresivos-734x489.jpg")
 
-        val evento4=Evento("Ejemplo",Salida.CITAS,5000,"Polanco, CDMX","https://www.dzoom.org.es/wp-content/uploads/2019/09/paisajes-expresivos-734x489.jpg")
+        val evento4=Evento("Ejemplo",EventoTipo.CITAS,5000,"Polanco, CDMX","https://www.dzoom.org.es/wp-content/uploads/2019/09/paisajes-expresivos-734x489.jpg")
 
         val ref1=baseDatos.getReference("eventos/1")
         ref1.setValue(evento1)

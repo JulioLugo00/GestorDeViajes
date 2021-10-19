@@ -3,8 +3,8 @@ package mx.itesm.noobmasters.gestordeviajes.model
 
 
 
-class Evento(val nombre:String?=""
-             , val tipo:Salida?=Salida.VIAJES,
+data class Evento(val nombre:String?="",
+             val tipo:EventoTipo?=EventoTipo.VIAJES,
              val presupuesto:Int?=0,
              val ubicacion:String?="",
              val imagen:String?="",
