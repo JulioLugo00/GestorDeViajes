@@ -62,12 +62,13 @@ class CrearEventoFragment : Fragment() {
             var presupuesto = binding.etnPresupuesto.text.toString()
             var ubicacion = binding.tilUbicacion.editText?.text.toString()
             var nombre  = binding.tilNombreEvento.editText?.text.toString()
-            var fecha = binding.etdFechaInicio.text.toString()
+            var fechaInicio = binding.etdFechaInicio.text.toString()
+            var fechaFin = binding.etdFechaFinal.text.toString()
             var tipoStr = binding.spinnerTipo.selectedItem.toString()
             var imagen = ""
 
 
-            if(presupuesto == "" || ubicacion == "" || fecha == "" || nombre == ""){
+            if(presupuesto == "" || ubicacion == "" || fechaInicio == "" || nombre == ""|| fechaFin==""  ){
                 Toast.makeText(requireContext(), "Es necesario introducir todos los datos", Toast.LENGTH_SHORT).show()
             }
             
@@ -82,7 +83,7 @@ class CrearEventoFragment : Fragment() {
                     tipo = EventoTipo.SALIDAS
                 }
 
-                var evento = crearEventoViewModel.crearEvento(presupuestoInt, nombre, fecha, tipo,
+                var evento = crearEventoViewModel.crearEvento(presupuestoInt, nombre, fechaInicio,fechaFin, tipo,
                     ubicacion, imagen)
                 val referencia = baseDatos.getReference("eventos/$nombre")
                 referencia.setValue(evento)

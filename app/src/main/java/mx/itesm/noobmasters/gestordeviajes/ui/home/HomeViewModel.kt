@@ -44,7 +44,8 @@ class HomeViewModel : ViewModel() {
                             evento?.presupuesto,
                             evento?.ubicacion,
                             evento?.imagen,
-                            evento?.fecha))
+                            evento?.fechaInicio,
+                            evento?.fechaFin))
 
                     }
                     arregloEventos.value=listaTemporal

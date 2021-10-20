@@ -16,5 +16,9 @@ class CrearEventoActivity : AppCompatActivity() {
                 .replace(R.id.container, CrearEventoFragment.newInstance())
                 .commitNow()
         }
+
+
+        //Esconde el titulo de la app
+        supportActionBar?.hide()
     }
 }

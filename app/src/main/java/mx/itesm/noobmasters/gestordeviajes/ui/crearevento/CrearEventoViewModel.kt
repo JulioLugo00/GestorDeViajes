@@ -13,9 +13,9 @@ class CrearEventoViewModel : ViewModel() {
     //val ubicacionMLD = MutableLiveData<String>()
     //val imagenMLD = MutableLiveData<String>()
 
-    fun crearEvento(presupuesto: Int, nombre: String, fecha: String, tipo: EventoTipo, ubicacion: String,
+    fun crearEvento(presupuesto: Int, nombre: String, fechaInicio: String,fechaFin: String, tipo: EventoTipo, ubicacion: String,
         imagen:String): Evento{
-        val evento = Evento(nombre, tipo, presupuesto, ubicacion, imagen, fecha)
+        val evento = Evento(nombre, tipo, presupuesto, ubicacion, imagen, fechaInicio,fechaFin)
         return evento
     }
 }

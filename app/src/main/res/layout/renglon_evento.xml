@@ -30,23 +30,35 @@
             android:id="@+id/tvNombreActividad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
             android:text="Actividad 1"
             android:textAlignment="textStart"
-            android:textColor="#040927"
+            android:textColor="#FFFFFF"
             android:textSize="22dp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvFecha"
+            android:id="@+id/tvFechaInicio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="60dp"
-            android:text="28 de agosto al 1 septiembre"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:text="Del:"
             android:textAlignment="textStart"
-            android:textColor="#040927"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvFechaFin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="75dp"
+            android:text="al:"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
             android:textSize="15dp"
             android:textStyle="bold" />
 
