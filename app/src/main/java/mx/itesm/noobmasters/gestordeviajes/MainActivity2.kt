@@ -1,5 +1,6 @@
 package mx.itesm.noobmasters.gestordeviajes
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -40,6 +41,12 @@ class MainActivity2 : AppCompatActivity() {
 
         //Esconde el titulo de la app
         supportActionBar?.hide()
+
+        binding.btnUsusario.setOnClickListener{
+            val intUsuario = Intent(this, UsuarioActivity::class.java)
+            startActivity(intUsuario)
+        }
+
     //inicializarBase()
     }
 

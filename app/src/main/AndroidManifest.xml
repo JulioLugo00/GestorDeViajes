@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GestorDeViajes">
         <activity
+            android:name=".UsuarioActivity"
+            android:exported="true" />
+        <activity
             android:name=".CrearEventoActivity"
             android:exported="false" />
         <activity
