@@ -58,14 +58,4 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         app:srcCompat="@drawable/default_profile" />
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:layout_width="57dp"
-        android:layout_height="55dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
-        app:srcCompat="@drawable/lapiz" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,14 +50,12 @@ class UsuarioActivity : AppCompatActivity() {
     private fun ocultarDatos() {
         binding.linearLayout3.isVisible = false
         binding.imageView5.isVisible = false
-        binding.imageButton2.isVisible = false
         binding.btnSignOut.isVisible = false
         binding.btnSignIn.isVisible = true
     }
     private fun mostrarDatos() {
         binding.linearLayout3.isVisible = true
         binding.imageView5.isVisible = true
-        binding.imageButton2.isVisible = true
         binding.btnSignOut.isVisible = true
         binding.btnSignIn.isVisible = false
     }
