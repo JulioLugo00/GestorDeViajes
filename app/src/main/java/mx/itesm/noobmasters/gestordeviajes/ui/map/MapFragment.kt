@@ -1,5 +1,6 @@
 package mx.itesm.noobmasters.gestordeviajes.ui.map
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import mx.itesm.noobmasters.gestordeviajes.MapActivity
 import mx.itesm.noobmasters.gestordeviajes.databinding.FragmentMapaBinding
 
 class MapFragment : Fragment() {
@@ -42,6 +44,10 @@ class MapFragment : Fragment() {
             textView.text = it
         })
 
+        binding.btnMap.setOnClickListener {
+            val intencion = Intent(context, MapActivity::class.java)
+            startActivity(intencion)
+        }
 
         return binding.root
     }

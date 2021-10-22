@@ -46,7 +46,6 @@ class MainActivity2 : AppCompatActivity() {
             val intUsuario = Intent(this, UsuarioActivity::class.java)
             startActivity(intUsuario)
         }
-
     //inicializarBase()
     }
 
