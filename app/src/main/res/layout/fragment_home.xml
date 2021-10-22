@@ -49,8 +49,8 @@
                     android:layout_weight="1"
                     android:scaleType="fitXY"
 
-                    app:srcCompat="@drawable/fondo_ejemplo02"
-                    tools:src="@tools:sample/backgrounds/scenic" />
+                    app:srcCompat="@drawable/viajes"
+                    tools:src="@drawable/viajes" />
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -59,7 +59,7 @@
                     android:layout_margin="20dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/fondo_ejemplo02"
+                    app:srcCompat="@drawable/salidas"
                     tools:src="@tools:sample/backgrounds/scenic" />
 
                 <ImageView
@@ -69,7 +69,7 @@
                     android:layout_margin="20dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/fondo_ejemplo02"
+                    app:srcCompat="@drawable/citas"
                     tools:src="@tools:sample/backgrounds/scenic" />
             </LinearLayout>
         </LinearLayout>
