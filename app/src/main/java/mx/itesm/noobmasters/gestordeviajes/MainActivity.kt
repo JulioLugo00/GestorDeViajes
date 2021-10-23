@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun cambiarPantalla() {
-        val intPrincipal = Intent(this, MainActivity2::class.java)
-        startActivity(intPrincipal)
+        val intLogIn = Intent(this, LogInActivity::class.java)
+        startActivity(intLogIn)
         //Destruye la pantalla, esta actividad (Slash Activity)
         this.finish()
     }

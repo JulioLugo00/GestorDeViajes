@@ -21,15 +21,15 @@
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/fragment_usuario.xml" value="0.3875" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/renglon_evento.xml" value="0.536" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3875" />
-        <entry key="..\:/Escuela/GestorDeViajes/app/src/main/res/layout/activity_main2.xml" value="0.22" />
-        <entry key="..\:/Escuela/GestorDeViajes/app/src/main/res/layout/activity_map.xml" value="0.1796875" />
-        <entry key="..\:/Escuela/GestorDeViajes/app/src/main/res/layout/fragment_mapa.xml" value="0.1796875" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.3828125" />
+        <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/activity_log_in.xml" value="0.3423913043478261" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/activity_main2.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/activity_usuario.xml" value="0.33" />
+        <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/content_log_in.xml" value="0.3423913043478261" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/crear_evento_activity.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/crearevento_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/fragment_first.xml" value="0.3423913043478261" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/fragment_mapa.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/fragment_notifications.xml" value="0.36666666666666664" />
@@ -40,7 +40,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
