@@ -1,5 +1,6 @@
 package mx.itesm.noobmasters.gestordeviajes.ui.crearevento
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,6 +15,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import mx.itesm.noobmasters.gestordeviajes.CrearEventoActivity
+import mx.itesm.noobmasters.gestordeviajes.MainActivity2
 import mx.itesm.noobmasters.gestordeviajes.R
 import mx.itesm.noobmasters.gestordeviajes.databinding.CreareventoFragmentBinding
 import mx.itesm.noobmasters.gestordeviajes.model.EventoTipo
@@ -108,6 +111,8 @@ class CrearEventoFragment : Fragment() {
                         ubicacion, imagen)
                     val referencia = baseDatos.getReference("${usuario!!.uid}/$nombre")
                     referencia.setValue(evento)
+                    val intCrearMainActivity2 = Intent(context, MainActivity2::class.java)
+                    startActivity(intCrearMainActivity2)
                 }
             }
         }
