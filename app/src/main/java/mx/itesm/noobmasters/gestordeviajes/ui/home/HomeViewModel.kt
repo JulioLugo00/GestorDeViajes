@@ -2,6 +2,7 @@ package mx.itesm.noobmasters.gestordeviajes.ui.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -13,6 +14,7 @@ class HomeViewModel : ViewModel() {
     // Modelo
     //arrayListOf
     //private val servicioPaises = ServicioPaises()
+    private val mAuth = FirebaseAuth.getInstance()
 
 
 
@@ -25,7 +27,8 @@ class HomeViewModel : ViewModel() {
     // Eventos
     fun descargarDatosEventos() {
         baseDatos = FirebaseDatabase.getInstance()
-        val referencia=baseDatos.getReference("eventos")
+
+        val referencia=baseDatos.getReference("${mAuth.currentUser!!.uid}")
 
         referencia.addValueEventListener(object :ValueEventListener{
 
