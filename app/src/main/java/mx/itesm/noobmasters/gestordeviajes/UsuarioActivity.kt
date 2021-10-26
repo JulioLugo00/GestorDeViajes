@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.bumptech.glide.Glide
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -17,6 +18,7 @@ import mx.itesm.noobmasters.gestordeviajes.databinding.ActivityUsuarioBinding
 class UsuarioActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUsuarioBinding
+    private val mAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +29,16 @@ class UsuarioActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
         configurarEventos()
+        configurarTextos()
     }
+
+    private fun configurarTextos() {
+        binding.textView3.text = mAuth.currentUser!!.displayName.toString()
+
+        var imageView = binding.imageView5
+        Glide.with(this).load(mAuth.currentUser!!.photoUrl).into(imageView)
+    }
+
     private fun configurarEventos() {
         binding.btnRegresar.setOnClickListener{
             val intMain2 = Intent(this, MainActivity2::class.java)
