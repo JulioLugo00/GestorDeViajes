@@ -62,6 +62,7 @@ class HomeFragment : Fragment() {
                 adaptadorListaEventos.actualizarDatos(lista)
 
             }else  {
+                adaptadorListaEventos.actualizarDatos(lista)
                 binding.tvNoHayEventos.visibility=View.VISIBLE
             }
             binding.pbCargando.visibility=View.INVISIBLE

@@ -34,7 +34,7 @@ class HomeViewModel : ViewModel() {
 
 
             override fun onDataChange(snapshot: DataSnapshot) {
-
+            println("Data a cambiado")
                 val listaTemporal:ArrayList<Evento> = ArrayList()
 
                 if(snapshot.hasChildren()){
@@ -54,6 +54,7 @@ class HomeViewModel : ViewModel() {
                     arregloEventos.value=listaTemporal
                 }
                 else{
+                    listaTemporal.clear()
                     arregloEventos.value=listaTemporal
                 }
             }
