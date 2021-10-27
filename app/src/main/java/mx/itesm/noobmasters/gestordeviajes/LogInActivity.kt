@@ -56,6 +56,8 @@ class LogInActivity : AppCompatActivity() {
     private fun configurarEventos() {
         binding.btnSignIn.setOnClickListener{
             autenticar()
+
+            //AuthUI.getInstance().signOut(this)
         }
     }
 
@@ -67,7 +69,7 @@ class LogInActivity : AppCompatActivity() {
                     val usuario = FirebaseAuth.getInstance().currentUser
                     println("Bienvenido: ${usuario?.displayName}")
                     println("Correo: ${usuario?.email}")
-                    println("Correo: ${usuario?.uid}")
+                    println("ID: ${usuario?.uid}")
                     val intMain2 = Intent(this, MainActivity2::class.java)
                     startActivity(intMain2)
                 }

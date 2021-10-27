@@ -56,8 +56,14 @@ class HomeFragment : Fragment() {
     private fun registrarObservadores() {
         homeViewModel.arregloEventos.observe(viewLifecycleOwner){lista->
             binding.pbCargando.visibility=View.VISIBLE
-            adaptadorListaEventos.actualizarDatos(lista)
+            //println("\n el size es"+lista.size)
+            if(lista.isNotEmpty()){
+                binding.tvNoHayEventos.visibility=View.INVISIBLE
+                adaptadorListaEventos.actualizarDatos(lista)
 
+            }else  {
+                binding.tvNoHayEventos.visibility=View.VISIBLE
+            }
             binding.pbCargando.visibility=View.INVISIBLE
         }
     }

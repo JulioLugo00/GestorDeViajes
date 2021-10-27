@@ -111,6 +111,7 @@ class CrearEventoFragment : Fragment() {
                         ubicacion, imagen)
                     val referencia = baseDatos.getReference("${usuario!!.uid}/$nombre")
                     referencia.setValue(evento)
+                    Toast.makeText(context,"Actividad creada exitosamente",Toast.LENGTH_SHORT).show()
                     val intCrearMainActivity2 = Intent(context, MainActivity2::class.java)
                     startActivity(intCrearMainActivity2)
                 }

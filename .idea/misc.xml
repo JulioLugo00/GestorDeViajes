@@ -5,25 +5,24 @@
       <map>
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4036458333333333" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.4036458333333333" />
+        <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2869791666666667" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4036458333333333" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/drawable/ic_map.xml" value="0.4036458333333333" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.4036458333333333" />
-        <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/activity_log_in.xml" value="0.264" />
+        <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/activity_main2.xml" value="0.4" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/activity_main3.xml" value="0.264" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/activity_usuario.xml" value="0.3875" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/crear_evento_activity.xml" value="0.25364583333333335" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/crearevento_fragment.xml" value="0.25364583333333335" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/fragment_dashboard.xml" value="0.4" />
-        <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/fragment_home.xml" value="0.4" />
+        <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/fragment_mapa.xml" value="0.25364583333333335" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/fragment_notifications.xml" value="0.3875" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/fragment_usuario.xml" value="0.3875" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/layout/renglon_evento.xml" value="0.536" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3875" />
-        <entry key="..\:/Escuela/GestorDeViajes/app/src/main/res/layout/activity_main2.xml" value="0.22" />
-        <entry key="..\:/Escuela/GestorDeViajes/app/src/main/res/layout/activity_map.xml" value="0.1796875" />
-        <entry key="..\:/Escuela/GestorDeViajes/app/src/main/res/layout/fragment_mapa.xml" value="0.1796875" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.3828125" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/activity_main2.xml" value="0.36666666666666664" />
@@ -36,14 +35,7 @@
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/fragment_usuario.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/layout/renglon_evento.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Alan/OneDrive/Escritorio/tec/CTMRoman/GestorDeViajes/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Julio/AndroidStudioProjects/GestorDeViajes/app/src/main/res/layout/activity_log_in.xml" value="0.259375" />
         <entry key="..\:/Users/Julio/AndroidStudioProjects/GestorDeViajes/app/src/main/res/layout/activity_main.xml" value="0.259375" />
-        <entry key="..\:/Users/Julio/AndroidStudioProjects/GestorDeViajes/app/src/main/res/layout/activity_main2.xml" value="0.259375" />
-        <entry key="..\:/Users/Julio/AndroidStudioProjects/GestorDeViajes/app/src/main/res/layout/activity_map.xml" value="0.259375" />
-        <entry key="..\:/Users/Julio/AndroidStudioProjects/GestorDeViajes/app/src/main/res/layout/activity_usuario.xml" value="0.259375" />
-        <entry key="..\:/Users/Julio/AndroidStudioProjects/GestorDeViajes/app/src/main/res/layout/crear_evento_activity.xml" value="0.259375" />
-        <entry key="..\:/Users/Julio/AndroidStudioProjects/GestorDeViajes/app/src/main/res/layout/crearevento_fragment.xml" value="0.259375" />
-        <entry key="..\:/Users/Julio/AndroidStudioProjects/GestorDeViajes/app/src/main/res/layout/fragment_mapa.xml" value="0.13333333333333333" />
       </map>
     </option>
   </component>

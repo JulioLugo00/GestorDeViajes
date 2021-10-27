@@ -28,7 +28,7 @@ class HomeViewModel : ViewModel() {
     fun descargarDatosEventos() {
         baseDatos = FirebaseDatabase.getInstance()
 
-        val referencia=baseDatos.getReference("${mAuth.currentUser!!.uid}")
+        val referencia=baseDatos.getReference("${mAuth.currentUser?.uid}")
 
         referencia.addValueEventListener(object :ValueEventListener{
 
@@ -53,7 +53,9 @@ class HomeViewModel : ViewModel() {
                     }
                     arregloEventos.value=listaTemporal
                 }
-
+                else{
+                    arregloEventos.value=listaTemporal
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {
