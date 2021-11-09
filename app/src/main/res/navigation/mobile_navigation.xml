@@ -22,4 +22,10 @@
         android:name="mx.itesm.noobmasters.gestordeviajes.ui.eventos.EventosFragment"
         android:label="@string/title_eventos"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_nosotros"
+        android:name="mx.itesm.noobmasters.gestordeviajes.NosotrosFragment"
+        android:label="@string/title_eventos"
+        tools:layout="@layout/fragment_nosotros" />
 </navigation>

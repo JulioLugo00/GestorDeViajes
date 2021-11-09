@@ -15,4 +15,9 @@
         android:icon="@drawable/ic_ver_actividades"
         android:title="@string/title_eventos" />
 
+    <item
+        android:id="@+id/navigation_nosotros"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="Nosotros" />
+
 </menu>
