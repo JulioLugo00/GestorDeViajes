@@ -8,6 +8,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import mx.itesm.noobmasters.gestordeviajes.model.Evento
+import mx.itesm.noobmasters.gestordeviajes.model.EventoTipo
 
 class HomeViewModel : ViewModel() {
 
@@ -21,8 +22,22 @@ class HomeViewModel : ViewModel() {
     // Variables observables (LiveData)
     val arregloEventos = MutableLiveData<List<Evento>>()
 
+    val filtro = MutableLiveData<Int>(0)
+
     private lateinit var baseDatos: FirebaseDatabase
 
+    fun aplicarFiltroViaje(){
+        filtro.value=1
+    }
+    fun aplicarFiltroSalida(){
+        filtro.value=2
+    }
+    fun aplicarFiltroCita(){
+        filtro.value=3
+    }
+    fun quitarFiltro(){
+        filtro.value=0
+    }
 
     // Eventos
     fun descargarDatosEventos() {
