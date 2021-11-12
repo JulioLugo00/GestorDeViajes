@@ -3,6 +3,9 @@ package mx.itesm.noobmasters.gestordeviajes
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -32,6 +35,7 @@ class UsuarioActivity : AppCompatActivity() {
         configurarTextos()
     }
 
+
     private fun configurarTextos() {
         binding.textView3.text = mAuth.currentUser!!.displayName.toString()
 
@@ -46,10 +50,21 @@ class UsuarioActivity : AppCompatActivity() {
         }
 
         binding.btnSignOut.setOnClickListener{
+            binding.pgUsuario.visibility=View.VISIBLE
             AuthUI.getInstance().signOut(this)
+            cambiarPantallaConDelay()
+            //binding.pgUsuario.visibility=View.INVISIBLE
+        }
+    }
+
+    private fun cambiarPantallaConDelay() {
+        Handler(Looper.getMainLooper()).postDelayed({
+
             val intLogIn = Intent(this, LogInActivity::class.java)
             startActivity(intLogIn)
-        }
+
+
+        },1000)
     }
 
 

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import mx.itesm.noobmasters.gestordeviajes.CrearEventoActivity
 import mx.itesm.noobmasters.gestordeviajes.databinding.FragmentHomeBinding
 //import mx.itesm.noobmasters.gestordeviajes.ui.crearEvento.CrearEventoFragment
@@ -26,7 +27,7 @@ class HomeFragment : Fragment() {
 
     // This property is only valid between onCreateView and
     // onDestroyView.
-
+    private val mAuth = FirebaseAuth.getInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -51,6 +52,12 @@ class HomeFragment : Fragment() {
             val intCrearEvento = Intent(context, CrearEventoActivity::class.java)
             startActivity(intCrearEvento)
         }
+        if(mAuth.currentUser?.displayName !=null){
+            var user=mAuth.currentUser?.displayName.toString()
+            binding.tvTituloPantallaPrincipal.text="Buen día ${user}"
+
+        }
+
     }
 
     private fun registrarObservadores() {
