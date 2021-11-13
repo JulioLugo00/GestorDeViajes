@@ -109,14 +109,45 @@ class CrearEventoFragment : Fragment() {
 
                     var evento = crearEventoViewModel.crearEvento(presupuestoInt, nombre, fechaInicio,fechaFin, tipo,
                         ubicacion, imagen)
-                    val referencia = baseDatos.getReference("${usuario!!.uid}/$nombre")
-                    referencia.setValue(evento)
+                    val id=generarIdRandom(10)
+                    val referencia = baseDatos.getReference("usuarios/${usuario?.uid}/eventos/${id}")
+
+                    val referencia02 = baseDatos.getReference("eventos/${id}/")
+                    referencia.setValue(true)
+                    referencia02.setValue(evento)
                     Toast.makeText(context,"Actividad creada exitosamente",Toast.LENGTH_SHORT).show()
                     val intCrearMainActivity2 = Intent(context, MainActivity2::class.java)
                     startActivity(intCrearMainActivity2)
                 }
             }
         }
+
+        binding.btnAceptarCodigoEvento.setOnClickListener {
+            var codigo = binding.tillCodigoEvento.editText?.text.toString()
+            if(codigo.isNotEmpty()){
+                baseDatos.getReference("eventos/${codigo}").get()
+                    .addOnSuccessListener { result ->
+                        if(result.hasChildren()){
+                            var usuario = mAuth.currentUser
+                            val referencia = baseDatos.getReference("usuarios/${usuario?.uid}/eventos/${codigo}")
+                            referencia.setValue(true)
+                            Toast.makeText(context,"Codigo exitoso",Toast.LENGTH_SHORT).show()
+                            val intCrearMainActivity2 = Intent(context, MainActivity2::class.java)
+                            startActivity(intCrearMainActivity2)
+                        }else{
+                            Toast.makeText(context,"Codigo invalido",Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+
+                    }
+
+            }else{
+                Toast.makeText(context,"No hay codigo",Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
     }
 
 
@@ -145,6 +176,12 @@ class CrearEventoFragment : Fragment() {
     private fun registrarObservadores() {
 
 
+    }
+    fun generarIdRandom(length: Int) : String {
+        val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
+        return (1..length)
+            .map { allowedChars.random() }
+            .joinToString("")
     }
 
     private fun configurarLista() {

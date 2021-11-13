@@ -63,7 +63,7 @@ class HomeFragment : Fragment() {
         }
         //FILTROS
         binding.imgButtonViaje.setOnClickListener {
-            Toast.makeText(context, "Viajes disponibles", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Viajes disponibles", Toast.LENGTH_LONG).show()
             homeViewModel.aplicarFiltroViaje()
             homeViewModel.descargarDatosEventos()
         }

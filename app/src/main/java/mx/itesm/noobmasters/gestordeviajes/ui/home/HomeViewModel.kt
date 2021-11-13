@@ -9,6 +9,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import mx.itesm.noobmasters.gestordeviajes.model.Evento
 import mx.itesm.noobmasters.gestordeviajes.model.EventoTipo
+import kotlin.reflect.typeOf
 
 class HomeViewModel : ViewModel() {
 
@@ -42,42 +43,63 @@ class HomeViewModel : ViewModel() {
     // Eventos
     fun descargarDatosEventos() {
         baseDatos = FirebaseDatabase.getInstance()
+        //var prueba = emptyMap<String,Evento>()
+        var arrayTodosLosEventosEnBD = mutableMapOf<String,Evento>()
+        //val prueba:ArrayList<Evento> = ArrayList()
+        var arrayTodosMisEventos = ArrayList<String>()
+        //var arrayTodosLosEventosEnBD = ArrayList<String>()
 
-        val referencia=baseDatos.getReference("${mAuth.currentUser?.uid}")
-
-        referencia.addValueEventListener(object :ValueEventListener{
-
-
+        baseDatos.getReference("eventos").addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-            println("Data a cambiado")
                 val listaTemporal:ArrayList<Evento> = ArrayList()
+                arrayTodosMisEventos.clear()
+                arrayTodosLosEventosEnBD.clear()
 
-                if(snapshot.hasChildren()){
-                    for (registro in snapshot.children){
-                        //Guarda el valor en una clase ya existente
-                        val evento=registro.getValue(Evento::class.java)
-/**/
-                        listaTemporal.add(Evento(evento?.nombre,
-                            evento?.tipo,
-                            evento?.presupuesto,
-                            evento?.ubicacion,
-                            evento?.imagen,
-                            evento?.fechaInicio,
-                            evento?.fechaFin))
+                for (elemento in snapshot.children) {
+                    val evento=elemento.getValue(Evento::class.java)
+                    arrayTodosLosEventosEnBD.put(elemento.key.toString(),Evento(evento?.nombre,
+                        evento?.tipo,
+                        evento?.presupuesto,
+                        evento?.ubicacion,
+                        evento?.imagen,
+                        evento?.fechaInicio,
+                        evento?.fechaFin))
+                    //arrayTodosMisEventos.add(elemento.key.toString())
+                }
+                baseDatos.getReference("usuarios/${mAuth.currentUser?.uid}").child("eventos").get()
+                    .addOnSuccessListener { result ->
+                        for (elemento in result.children) {
+                            arrayTodosMisEventos.add(elemento.key.toString())
+                            //prueba.put(elemento.key.toString(), )
+                           // var key =elemento.key.toString()
+                            //arrayTodosLosEventosEnBD.add(key)
+                        }
+
+                        //Filtrado
+                        arrayTodosLosEventosEnBD.map {
+                            if(arrayTodosMisEventos.contains(it.key)){
+                                listaTemporal.add(it.value)
+                            }
+                        }
+                        //println(listaTemporal)
+                        arregloEventos.value=listaTemporal
+                    }
+                    .addOnFailureListener { exception ->
 
                     }
-                    arregloEventos.value=listaTemporal
-                }
-                else{
-                    listaTemporal.clear()
-                    arregloEventos.value=listaTemporal
-                }
+
+
+
             }
 
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
+
         })
+
+
+
 
 
     }
