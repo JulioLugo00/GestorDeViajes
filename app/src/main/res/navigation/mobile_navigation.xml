@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="mx.itesm.noobmasters.gestordeviajes.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_eventoInfoFrag"
+            app:destination="@id/eventoInfoFrag" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_map"
@@ -28,4 +32,13 @@
         android:name="mx.itesm.noobmasters.gestordeviajes.NosotrosFragment"
         android:label="@string/title_eventos"
         tools:layout="@layout/fragment_nosotros" />
+    <fragment
+        android:id="@+id/eventoInfoFrag"
+        android:name="mx.itesm.noobmasters.gestordeviajes.ui.eventoInfo.EventoInfoFrag"
+        android:label="evento_info_fragment"
+        tools:layout="@layout/evento_info_fragment" >
+        <argument
+            android:name="eventoInfo"
+            app:argType="mx.itesm.noobmasters.gestordeviajes.model.Evento" />
+    </fragment>
 </navigation>

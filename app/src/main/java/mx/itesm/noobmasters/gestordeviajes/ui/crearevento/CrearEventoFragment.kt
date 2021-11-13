@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
@@ -81,7 +82,7 @@ class CrearEventoFragment : Fragment() {
             var fechaFin = binding.btnFechaFinal.text.toString()
             var tipoStr = binding.spinnerTipo.selectedItem.toString()
             var imagen = ""
-
+            var cosasPorLlevar= mapOf("nada" to "nada por llevar")
 
             if(presupuesto == "" || ubicacion == ""  || nombre == ""
                 || fechaInicio == "##-##-####" || fechaFin == "##-##-####"){
@@ -106,18 +107,22 @@ class CrearEventoFragment : Fragment() {
                     } else {
                         tipo = EventoTipo.SALIDAS
                     }
+                    val id=generarIdRandom(10)
 
                     var evento = crearEventoViewModel.crearEvento(presupuestoInt, nombre, fechaInicio,fechaFin, tipo,
-                        ubicacion, imagen)
-                    val id=generarIdRandom(10)
+                        ubicacion, imagen,id,cosasPorLlevar)
+
+
                     val referencia = baseDatos.getReference("usuarios/${usuario?.uid}/eventos/${id}")
 
                     val referencia02 = baseDatos.getReference("eventos/${id}/")
-                    referencia.setValue(true)
                     referencia02.setValue(evento)
+                    referencia.setValue(true)
+
                     Toast.makeText(context,"Actividad creada exitosamente",Toast.LENGTH_SHORT).show()
                     val intCrearMainActivity2 = Intent(context, MainActivity2::class.java)
                     startActivity(intCrearMainActivity2)
+
                 }
             }
         }

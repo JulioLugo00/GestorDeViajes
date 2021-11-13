@@ -63,7 +63,10 @@ class HomeViewModel : ViewModel() {
                         evento?.ubicacion,
                         evento?.imagen,
                         evento?.fechaInicio,
-                        evento?.fechaFin))
+                        evento?.fechaFin,
+                        evento?.idUnico,
+                        evento?.cosasPorLlevar
+                        ))
                     //arrayTodosMisEventos.add(elemento.key.toString())
                 }
                 baseDatos.getReference("usuarios/${mAuth.currentUser?.uid}").child("eventos").get()

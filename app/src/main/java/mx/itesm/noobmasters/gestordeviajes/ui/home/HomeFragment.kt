@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import mx.itesm.noobmasters.gestordeviajes.CrearEventoActivity
@@ -17,7 +18,7 @@ import mx.itesm.noobmasters.gestordeviajes.model.EventoTipo
 
 //import mx.itesm.noobmasters.gestordeviajes.ui.crearEvento.CrearEventoFragment
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(),RenglonListener {
 
     private lateinit var homeViewModel: HomeViewModel
 
@@ -162,6 +163,16 @@ class HomeFragment : Fragment() {
 
             adapter = adaptadorListaEventos
         }
+        adaptadorListaEventos.listener=this
+    }
+
+    override fun clickEnRenglon(position: Int) {
+
+        val eventoSeleccionado=adaptadorListaEventos.arrEventos[position]
+        var accion=HomeFragmentDirections.actionNavigationHomeToEventoInfoFrag(eventoSeleccionado)
+        findNavController().navigate(accion)
+
+
     }
 
 /*

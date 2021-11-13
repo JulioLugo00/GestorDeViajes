@@ -14,8 +14,8 @@ class CrearEventoViewModel : ViewModel() {
     //val imagenMLD = MutableLiveData<String>()
 
     fun crearEvento(presupuesto: Int, nombre: String, fechaInicio: String,fechaFin: String, tipo: EventoTipo, ubicacion: String,
-        imagen:String): Evento{
-        val evento = Evento(nombre, tipo, presupuesto, ubicacion, imagen, fechaInicio,fechaFin)
+        imagen:String,id:String,cosasPorLlevar:Map<String, String>): Evento{
+        val evento = Evento(nombre, tipo, presupuesto, ubicacion, imagen, fechaInicio,fechaFin,id,cosasPorLlevar)
         return evento
     }
 }

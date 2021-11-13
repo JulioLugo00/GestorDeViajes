@@ -3,7 +3,9 @@ package mx.itesm.noobmasters.gestordeviajes.ui.home
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -13,7 +15,7 @@ import mx.itesm.noobmasters.gestordeviajes.model.Evento
 class AdaptadorListaEventos(var arrEventos:ArrayList<Evento>):
 RecyclerView.Adapter<AdaptadorListaEventos.EventoViewHolder>()
 {
-
+    var listener: RenglonListener?=null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
 
@@ -24,6 +26,13 @@ RecyclerView.Adapter<AdaptadorListaEventos.EventoViewHolder>()
 
     override fun onBindViewHolder(holder: EventoViewHolder, position: Int) {
         holder.set(arrEventos[position])
+        val renglon=holder.itemView.findViewById<FrameLayout>(R.id.layoutRenglon)
+        renglon.setOnClickListener {
+
+            listener?.clickEnRenglon(position)
+
+        }
+
     }
 
 
