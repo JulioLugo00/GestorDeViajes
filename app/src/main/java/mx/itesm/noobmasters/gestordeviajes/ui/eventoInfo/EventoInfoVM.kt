@@ -20,6 +20,12 @@ class EventoInfoVM : ViewModel() {
 
     private lateinit var baseDatos: FirebaseDatabase
 
+
+    fun agregarObjetoABase(objeto:String){
+        //IMPLEMENTAR CODIGO
+    }
+
+
     //Cierra la ventana si alguein elimino el evento
     fun notificarEventoEliminado(idEvento:String) {
         baseDatos = FirebaseDatabase.getInstance()
@@ -43,19 +49,6 @@ class EventoInfoVM : ViewModel() {
 
     fun eliminarEvento(idEvento:String) {
         baseDatos = FirebaseDatabase.getInstance()
-/*
-*
-*         baseDatos.getReference("eventos/${idEvento}").get( ).addOnSuccessListener { result ->
-            if(result.hasChildren()){
-                println("Si tiene hijo")
-            }
-            for (elemento in result.children) {
-                println(elemento.key.toString())
-
-            }
-        }
-* */
-
 
         baseDatos.getReference("eventos/${idEvento}").removeValue()
 

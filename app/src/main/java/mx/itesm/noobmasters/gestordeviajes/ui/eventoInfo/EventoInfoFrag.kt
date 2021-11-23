@@ -18,6 +18,8 @@ import mx.itesm.noobmasters.gestordeviajes.MainActivity2
 import mx.itesm.noobmasters.gestordeviajes.R
 import mx.itesm.noobmasters.gestordeviajes.databinding.EventoInfoFragmentBinding
 import android.content.DialogInterface
+import android.text.InputType
+import android.widget.EditText
 
 import mx.itesm.noobmasters.gestordeviajes.MainActivity
 
@@ -70,8 +72,8 @@ class EventoInfoFrag : Fragment() {
         viewModel.notificarEventoEliminado("${args.eventoInfo.idUnico}")
 
 
-
-        binding.tvNombreEvento.setText("nombre: ${args.eventoInfo.nombre}")
+        //Registrar datos evento
+        binding.tvNombreEvento.setText("${args.eventoInfo.nombre}")
         binding.inputCodigoEvento.setText("${args.eventoInfo.idUnico}")
 
         //Copiar codigo
@@ -96,8 +98,32 @@ class EventoInfoFrag : Fragment() {
             alertDialog.setNegativeButton(android.R.string.cancel) { dialog, which ->
             }
             alertDialog.show()
-
         }
+
+        //Agregar objeto
+        binding.btnAgregarObjeto.setOnClickListener {
+            val alertDialog = AlertDialog.Builder(context)
+            val input:EditText = EditText(context)
+            input.inputType=InputType.TYPE_CLASS_TEXT
+            alertDialog.setTitle("Objeto")
+            alertDialog.setMessage("¿Qué vas a traer?")
+            alertDialog.setView(input)
+
+            alertDialog.setPositiveButton(android.R.string.ok) { dialog, which ->
+               if(input.text.isNotEmpty()){
+                   println(input.text.toString())
+                   viewModel.agregarObjetoABase(input.text.toString())
+               }else{
+                   Toast.makeText(context, "No hay texto", Toast.LENGTH_LONG).show()
+               }
+
+            }
+
+            alertDialog.setNegativeButton(android.R.string.cancel) { dialog, which ->
+            }
+            alertDialog.show()
+        }
+
     }
 
 }
