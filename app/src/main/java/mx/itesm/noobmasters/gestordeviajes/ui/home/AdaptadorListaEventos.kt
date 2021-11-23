@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import mx.itesm.noobmasters.gestordeviajes.R
 import mx.itesm.noobmasters.gestordeviajes.model.Evento
+import mx.itesm.noobmasters.gestordeviajes.model.EventoTipo
 
 class AdaptadorListaEventos(var arrEventos:ArrayList<Evento>):
 RecyclerView.Adapter<AdaptadorListaEventos.EventoViewHolder>()
@@ -65,12 +66,22 @@ RecyclerView.Adapter<AdaptadorListaEventos.EventoViewHolder>()
         fun set(evento:Evento) {
 
             tvNombreEvento.text=evento.nombre
-
-            if(!evento.imagen.isNullOrEmpty()){
-                Glide.with(vistaParametro).load(evento.imagen).into(imagenFondo);
+/*
+*             if(!evento.imagen.isNullOrEmpty()){
+               // Glide.with(vistaParametro).load(evento.imagen).into(imagenFondo);
             }else{
                 imagenFondo.setImageResource(R.drawable.fondo_ejemplo03)
             }
+* */
+
+            if(evento.tipo==EventoTipo.VIAJES){
+                imagenFondo.setImageResource(R.drawable.fondo_viaje)
+            }else if(evento.tipo==EventoTipo.SALIDAS){
+                imagenFondo.setImageResource(R.drawable.fondo_salida)
+            }else{
+                imagenFondo.setImageResource(R.drawable.fondo_cita)
+            }
+
 
             if(evento.fechaInicio.isNullOrEmpty()){
                 tvFechaInicio.text="Sin fecha asignada"

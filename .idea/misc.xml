@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documents/Apps 2021/GestorDeViajes-HD/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.23697916666666666" />
+        <entry key="..\:/Documents/Apps 2021/GestorDeViajes-HD/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.23697916666666666" />
+        <entry key="..\:/Documents/Apps 2021/GestorDeViajes-HD/app/src/main/res/layout/activity_log_in.xml" value="0.22083333333333333" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes-HD/app/src/main/res/layout/activity_main2.xml" value="0.3875" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes-HD/app/src/main/res/layout/crear_evento_activity.xml" value="0.2796875" />
         <entry key="..\:/Documents/Apps 2021/GestorDeViajes-HD/app/src/main/res/layout/crearevento_fragment.xml" value="0.2796875" />
