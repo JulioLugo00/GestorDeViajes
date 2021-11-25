@@ -54,9 +54,13 @@ class HomeFragment : Fragment(),RenglonListener {
         homeViewModel.descargarDatosEventos()
 
         binding.btnAgregarActividad.setOnClickListener{
-            val intCrearEvento = Intent(context, CrearEventoActivity::class.java)
-            startActivity(intCrearEvento)
+            //val intCrearEvento = Intent(context, CrearEventoActivity::class.java)
+            //startActivity(intCrearEvento)
+            val crearEventoIntent = Intent(context, CrearEventoActivity::class.java)
+            crearEventoIntent.putExtra("ubicacion_key", "")
+            startActivity(crearEventoIntent)
         }
+        
         if(mAuth.currentUser?.displayName !=null){
             var user=mAuth.currentUser?.displayName.toString()
             binding.tvTituloPantallaPrincipal.text="Buen día ${user}"

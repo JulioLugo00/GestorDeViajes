@@ -22,6 +22,14 @@ import mx.itesm.noobmasters.gestordeviajes.R
 import mx.itesm.noobmasters.gestordeviajes.databinding.CreareventoFragmentBinding
 import mx.itesm.noobmasters.gestordeviajes.model.EventoTipo
 import java.text.SimpleDateFormat
+//import android.R
+
+
+
+//import android.R
+
+
+
 
 
 class CrearEventoFragment : Fragment() {
@@ -54,8 +62,20 @@ class CrearEventoFragment : Fragment() {
         registrarObservadores()
         registrarEventos()
         baseDatos = Firebase.database
+
+
+
+        val v: View = inflater.inflate(R.layout.crearevento_fragment, container, false)
+        val texto = requireArguments().getString("message")
+        if (texto != null) {
+            binding.tilUbicacion.editText?.setText(texto)
+        }
+
+
         return binding.root
     }
+
+
 
     private fun registrarEventos() {
         opciones = binding.spinnerTipo
