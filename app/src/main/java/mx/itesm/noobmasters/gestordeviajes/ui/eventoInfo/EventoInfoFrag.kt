@@ -75,6 +75,10 @@ class EventoInfoFrag : Fragment() {
         //Registrar datos evento
         binding.tvNombreEvento.setText("${args.eventoInfo.nombre}")
         binding.inputCodigoEvento.setText("${args.eventoInfo.idUnico}")
+        binding.tvFechaInicioF.setText("Fecha inicio:${args.eventoInfo.fechaInicio}")
+        binding.tvFechaFinF.setText("Fecha fin:${args.eventoInfo.fechaFin}")
+        binding.tvPresupuesto.setText("presupuesto:$${args.eventoInfo.presupuesto}")
+        binding.tvUbicacion.setText("Ubicación:${args.eventoInfo.ubicacion}")
 
         //Copiar codigo
         binding.btnCopiarCodigo.setOnClickListener {
@@ -89,7 +93,7 @@ class EventoInfoFrag : Fragment() {
 
             val alertDialog = AlertDialog.Builder(context)
             alertDialog.setTitle("Alerta")
-            alertDialog.setMessage("Vas a eliminar un evento, ¿Estas seguro?")
+            alertDialog.setMessage("Vas a eliminar un evento, los demás ya no podran verlo, ¿Estas seguro?")
 
             alertDialog.setPositiveButton(android.R.string.ok) { dialog, which ->
                 viewModel.eliminarEvento("${args.eventoInfo.idUnico}")
