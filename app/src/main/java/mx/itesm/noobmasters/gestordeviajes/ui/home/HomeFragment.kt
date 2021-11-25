@@ -60,7 +60,7 @@ class HomeFragment : Fragment(),RenglonListener {
             crearEventoIntent.putExtra("ubicacion_key", "")
             startActivity(crearEventoIntent)
         }
-        
+
         if(mAuth.currentUser?.displayName !=null){
             var user=mAuth.currentUser?.displayName.toString()
             binding.tvTituloPantallaPrincipal.text="Buen día ${user}"
