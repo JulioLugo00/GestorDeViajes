@@ -75,10 +75,10 @@ class EventoInfoFrag : Fragment() {
         //Registrar datos evento
         binding.tvNombreEvento.setText("${args.eventoInfo.nombre}")
         binding.inputCodigoEvento.setText("${args.eventoInfo.idUnico}")
-        binding.tvFechaInicioF.setText("Fecha inicio:${args.eventoInfo.fechaInicio}")
-        binding.tvFechaFinF.setText("Fecha fin:${args.eventoInfo.fechaFin}")
-        binding.tvPresupuesto.setText("presupuesto:$${args.eventoInfo.presupuesto}")
-        binding.tvUbicacion.setText("Ubicación:${args.eventoInfo.ubicacion}")
+        binding.tvFechaInicioF.setText("Fecha inicio: ${args.eventoInfo.fechaInicio}")
+        binding.tvFechaFinF.setText("Fecha fin: ${args.eventoInfo.fechaFin}")
+        binding.tvPresupuesto.setText("Presupuesto:\n$${args.eventoInfo.presupuesto}")
+        binding.tvUbicacion.setText("Ubicación: ${args.eventoInfo.ubicacion}")
 
         //Copiar codigo
         binding.btnCopiarCodigo.setOnClickListener {
