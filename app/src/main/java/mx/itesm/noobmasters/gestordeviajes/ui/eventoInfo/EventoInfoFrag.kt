@@ -21,6 +21,8 @@ import android.content.DialogInterface
 import android.text.InputType
 import android.widget.EditText
 import androidx.core.view.contains
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.findFragment
 
 import mx.itesm.noobmasters.gestordeviajes.MainActivity
 
@@ -37,6 +39,8 @@ class EventoInfoFrag : Fragment() {
 
     private val args:EventoInfoFragArgs by navArgs()
 
+    private lateinit var fragmentoInfo: InfoObjetosFragment
+
     private lateinit var binding:EventoInfoFragmentBinding
 
     override fun onCreateView(
@@ -45,6 +49,12 @@ class EventoInfoFrag : Fragment() {
     ): View? {
         //return inflater.inflate(R.layout.evento_info_fragment, container, false)
         binding= EventoInfoFragmentBinding.inflate(layoutInflater)
+        val preferencias = activity?.getSharedPreferences("eventKey",Context.MODE_PRIVATE)
+        preferencias?.edit()?.apply() {
+            putString("idEvent",args.eventoInfo.idUnico.toString())
+            commit()
+        }
+        println("ON RESUME EXTERIOR ${args.eventoInfo.idUnico.toString()}")
         return binding.root
     }
 
@@ -55,6 +65,7 @@ class EventoInfoFrag : Fragment() {
         registrarEventos()
         registrarObservadores()
     }
+
 
     private fun registrarObservadores() {
         //Si alguien elimino el evento, te saca

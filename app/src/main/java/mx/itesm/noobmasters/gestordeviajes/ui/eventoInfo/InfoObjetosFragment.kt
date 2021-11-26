@@ -1,6 +1,8 @@
 package mx.itesm.noobmasters.gestordeviajes.ui.eventoInfo
 
 import android.R
+import android.content.Context
+import android.media.metrics.Event
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.ListFragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.navArgs
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -21,7 +24,7 @@ class InfoObjetosFragment:ListFragment() {
 
     private var arrCosasPorLlevar:MutableList<String> = mutableListOf()
 
-    var eventKey="hfbnITKS5S"
+    var eventKey=""
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,15 +36,21 @@ class InfoObjetosFragment:ListFragment() {
 
     override fun onStart() {
         super.onStart()
-        leerDatos()
+
+
     }
 
-    fun assignKey(key:String){
-        eventKey=key
+    override fun onResume() {
+        super.onResume()
+        val preferencias = activity?.getSharedPreferences("eventKey",Context.MODE_PRIVATE)
+        eventKey=preferencias?.getString("idEvent","No existe")!!
+        println("Interior ${eventKey}")
+        leerDatos()
     }
 
     private fun leerDatos(){
         val baseDatos = Firebase.database
+        println("INTERIOR $eventKey")
         val referencia = baseDatos.getReference("eventos/$eventKey/cosasPorLlevar")
 
         referencia.addValueEventListener(object: ValueEventListener {

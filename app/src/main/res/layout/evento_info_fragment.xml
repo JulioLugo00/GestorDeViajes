@@ -125,6 +125,7 @@
         android:name="mx.itesm.noobmasters.gestordeviajes.ui.eventoInfo.InfoObjetosFragment"
         android:layout_width="377dp"
         android:layout_height="385dp"
+        android:layout_marginTop="45dp"
         app:layout_constraintBottom_toTopOf="@+id/btnAgregarObjeto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
