@@ -21,10 +21,12 @@ class EventoInfoVM : ViewModel() {
     private lateinit var baseDatos: FirebaseDatabase
 
 
-    fun agregarObjetoABase(objeto:String){
-        //IMPLEMENTAR CODIGO
-    }
+    fun agregarObjetoABase(objeto:String, eventoId:String?){
 
+        val referencia = baseDatos.getReference("eventos/$eventoId/cosasPorLlevar/$objeto")
+        referencia.setValue("false")
+
+    }
 
     //Cierra la ventana si alguein elimino el evento
     fun notificarEventoEliminado(idEvento:String) {

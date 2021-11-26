@@ -71,7 +71,6 @@ class CrearEventoFragment : Fragment() {
             binding.tilUbicacion.editText?.setText(texto)
         }
 
-
         return binding.root
     }
 
@@ -102,7 +101,7 @@ class CrearEventoFragment : Fragment() {
             var fechaFin = binding.btnFechaFinal.text.toString()
             var tipoStr = binding.spinnerTipo.selectedItem.toString()
             var imagen = ""
-            var cosasPorLlevar= mapOf("nada" to "nada por llevar")
+            var cosasPorLlevar= mapOf("Asistencia" to "false")
 
             if(presupuesto == "" || ubicacion == ""  || nombre == ""
                 || fechaInicio == "##-##-####" || fechaFin == "##-##-####"){

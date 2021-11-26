@@ -20,6 +20,7 @@ import mx.itesm.noobmasters.gestordeviajes.databinding.EventoInfoFragmentBinding
 import android.content.DialogInterface
 import android.text.InputType
 import android.widget.EditText
+import androidx.core.view.contains
 
 import mx.itesm.noobmasters.gestordeviajes.MainActivity
 
@@ -116,7 +117,7 @@ class EventoInfoFrag : Fragment() {
             alertDialog.setPositiveButton(android.R.string.ok) { dialog, which ->
                if(input.text.isNotEmpty()){
                    println(input.text.toString())
-                   viewModel.agregarObjetoABase(input.text.toString())
+                   viewModel.agregarObjetoABase(input.text.toString(), args.eventoInfo.idUnico.toString())
                }else{
                    Toast.makeText(context, "No hay texto", Toast.LENGTH_LONG).show()
                }
