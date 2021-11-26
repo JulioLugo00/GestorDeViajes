@@ -57,7 +57,7 @@ class InfoObjetosFragment:ListFragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 arrCosasPorLlevar.clear()
                 for (registro in snapshot.children){
-                    arrCosasPorLlevar.add("${registro.key}")
+                    arrCosasPorLlevar.add("${registro.key} - ${registro.value}")
                 }
                 //Adaptador
                 val adaptador = ArrayAdapter(requireContext(),

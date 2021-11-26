@@ -101,7 +101,7 @@ class CrearEventoFragment : Fragment() {
             var fechaFin = binding.btnFechaFinal.text.toString()
             var tipoStr = binding.spinnerTipo.selectedItem.toString()
             var imagen = ""
-            var cosasPorLlevar= mapOf("Asistencia" to "false")
+            var cosasPorLlevar= mapOf("Asistencia" to "No")
 
             if(presupuesto == "" || ubicacion == ""  || nombre == ""
                 || fechaInicio == "##-##-####" || fechaFin == "##-##-####"){

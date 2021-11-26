@@ -24,7 +24,7 @@ class EventoInfoVM : ViewModel() {
     fun agregarObjetoABase(objeto:String, eventoId:String?){
 
         val referencia = baseDatos.getReference("eventos/$eventoId/cosasPorLlevar/$objeto")
-        referencia.setValue("false")
+        referencia.setValue("No")
 
     }
 
