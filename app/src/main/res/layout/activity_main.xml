@@ -8,8 +8,8 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="246dp"
-        android:layout_height="45dp"
+        android:layout_width="308dp"
+        android:layout_height="49dp"
         android:fontFamily="monospace"
         android:text="Gestor de viajes"
         android:textAlignment="center"
