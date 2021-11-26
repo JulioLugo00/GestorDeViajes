@@ -8,6 +8,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import android.content.DialogInterface
 import androidx.lifecycle.MutableLiveData
+import com.google.firebase.auth.FirebaseAuth
 
 import mx.itesm.noobmasters.gestordeviajes.MainActivity
 import mx.itesm.noobmasters.gestordeviajes.model.Evento
@@ -19,12 +20,13 @@ class EventoInfoVM : ViewModel() {
     val eventoEliminado = MutableLiveData<Boolean>()
 
     private lateinit var baseDatos: FirebaseDatabase
+    private val mAuth = FirebaseAuth.getInstance()
 
 
     fun agregarObjetoABase(objeto:String, eventoId:String?){
-
+        val usuario = mAuth.currentUser
         val referencia = baseDatos.getReference("eventos/$eventoId/cosasPorLlevar/$objeto")
-        referencia.setValue("No")
+        referencia.setValue("${usuario?.displayName}")
 
     }
 
