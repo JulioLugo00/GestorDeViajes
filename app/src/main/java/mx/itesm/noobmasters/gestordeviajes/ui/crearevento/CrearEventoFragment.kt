@@ -101,7 +101,6 @@ class CrearEventoFragment : Fragment() {
             var fechaFin = binding.btnFechaFinal.text.toString()
             var tipoStr = binding.spinnerTipo.selectedItem.toString()
             var imagen = ""
-            var cosasPorLlevar= mapOf("Objetos para el evento" to "")
 
             if(presupuesto == "" || ubicacion == ""  || nombre == ""
                 || fechaInicio == "##-##-####" || fechaFin == "##-##-####"){
@@ -129,7 +128,7 @@ class CrearEventoFragment : Fragment() {
                     val id=generarIdRandom(10)
 
                     var evento = crearEventoViewModel.crearEvento(presupuestoInt, nombre, fechaInicio,fechaFin, tipo,
-                        ubicacion, imagen,id,cosasPorLlevar)
+                        ubicacion, imagen,id)
 
 
                     val referencia = baseDatos.getReference("usuarios/${usuario?.uid}/eventos/${id}")
